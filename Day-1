@@ -176,5 +176,26 @@
                 <th colspan="8">ALL THE BEST</th>
             </tr>
         </table>
+        <form action="Student Registrtion Form">
+            <h3>Student Registration Form</h3>
+            Name: <input type="text" id="Name" placeholder="Enter Name"><br><br>
+            Enrollment: <input type="text" id="Enrollment no" placeholder="Enter Enrollment"><br><br>
+            Branch:<select name="Branch" id="Branch" aria-placeholder="Select Branch"><br><br>
+            <option value="select">Select</option>
+            <option value="Cse">CSE</option>
+            <option value="IT">IT</option>
+            <option value="Ce">Ce</option>
+            </select><br><br>
+            Division: <input type="text" id="Division" placeholder="Enter Division" maxlength="1"><br><br>
+            Gender: <input type="radio" id="Male" name="Gender" value="Male">Male
+            <input type="radio" id="Female" name="Gender" value="Female">Female<br><br>
+            Mobile No: <input type="number" id="number" placeholder="Enter Number"><br><br>
+            Email Id: <input type="email" id="Email" placeholder="Enter Email"><br><br>
+            Password : <input type="password" id="Password" placeholder="Enter Password"><br><br>
+            Photo Upload : <input type="file" id="Photo upload"><br><br>
+            Remarks: <input type="text" id="Remarks" placeholder="Enter Remarks"><br><br>
+            <input type="submit">
+        
+        </form>
   </body>
 </html>
