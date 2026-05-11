@@ -9,6 +9,71 @@
   <h4> Morning </h4>
 <b> Computer Science </b>
 <p> My name is Shubham </p>
+<hr>
 <br>
+<ol><li>Hello</li>
+<li>my</li>
+<li>Socet</li></ol>
+<ul>
+    <li>Hello</li>
+    <li>My</li>
+    <li>Socet</li>
+</ul>
+<ol><li>Socet</li>
+<ul><li>Cse</li></ul>
+<ul><li>Ce</li></ul>
+<ul><li>IT</li></ul>
+<li>Asoit</li>
+<ul><li>Cse</li></ul>
+<ul><li>Ce</li></ul>
+<ul><li>IT</li></ul></ol>
+<table border="1px">
+    <tr>
+    <th>Subject</th>
+    <th>Marks</th>
+    <th>Roll no</th>
+    <th>Branch</th>
+    </tr>
+    <tr>
+        <td>
+            Maths
+        </td>
+        <td>80</td>
+        <td>789</td>
+        <td>Socet</td>
+    </tr>
+     <tr>
+        <td>
+            Java
+        </td>
+        <td>89</td>
+        <td>89</td>
+        <td>Asoit</td>
+    </tr>
+     <tr>
+        <td>
+            Python
+        </td>
+        <td>70</td>
+        <td>79</td>
+        <td>Asoit</td>
+    </tr>
+     <tr>
+        <td>
+            CGAVM
+        </td>
+        <td>98</td>
+        <td>69</td>
+        <td>Socet</td>
+    </tr>
+     <tr>
+        <td>
+            operating System
+        </td>
+        <td>75</td>
+        <td>10</td>
+         <td>Socet</td>
+    </tr>
+</table>
   </body>
 </html>
