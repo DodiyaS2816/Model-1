@@ -7,6 +7,8 @@
     <h2> Socet </h2>
    <h3> Ojt </h3>
   <h4> Morning </h4>
+  <h5> Morning </h5>
+  <h6> Morning </h6>
 <b> Computer Science </b>
 <p> My name is Shubham </p>
 <hr>
@@ -75,5 +77,104 @@
          <td>Socet</td>
     </tr>
 </table>
+
+        <table border="1px">
+            <th colspan="9">
+                            <img src="data:image/png;base64,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"></th>
+            <tr>
+                <th colspan="1" aria-rowspan="9">Name</th>
+                <td colspan="7">SHUBHAM DODIYA</td>
+            </tr>
+             <tr>
+                <th>Enrollment no</th>
+                <td colspan="2">2501031830007</td>
+                <TH colspan="1">SEAT NO:-
+                </TH>
+                <td colspan="5">123456</td>
+            </tr>
+               <tr>
+                <th>Couse Code</th>
+                <th>Course Name</th>
+                <th>CIE</th>
+                <th>ESE</th>
+                <th>CIE</th>
+                <th>ESE</th>
+                <th>TOTAL MARKS</th>
+                <th>OBTAIN MARKS</th>
+            </tr>
+            <tr>
+                <td>147</td>
+                <td>Java</td>
+                <td>45</td>
+                <td>56</td>
+                <td>78</td>
+                <td>52</td>
+                <td>100</td>
+                <td>89</td>
+            </tr>
+             <tr>
+                <td>150</td>
+                <td>Python</td>
+                <td>45</td>
+                <td>56</td>
+                <td>78</td>
+                <td>52</td>
+                <td>100</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>151</td>
+                <td>c+</td>
+                <td>45</td>
+                <td>56</td>
+                <td>78</td>
+                <td>52</td>
+                <td>100</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>153</td>
+                <td>Python</td>
+                <td>45</td>
+                <td>56</td>
+                <td>78</td>
+                <td>52</td>
+                <td>100</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>154</td>
+                <td>Cgavm</td>
+                <td>45</td>
+                <td>56</td>
+                <td>78</td>
+                <td>52</td>
+                <td>100</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>155</td>
+                <td>Os</td>
+                <td>45</td>
+                <td>56</td>
+                <td>78</td>
+                <td>52</td>
+                <td>100</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <th colspan="7">Total marks</th>
+                <td>777</td>
+            </tr>
+            <tr>
+                <th>Percentage</th>
+                <td colspan="3">77%</td>
+                <th>CGPA</th>
+                <td colspan="3">7.7</td>
+            </tr>
+            <tr>
+                <th colspan="8">ALL THE BEST</th>
+            </tr>
+        </table>
   </body>
 </html>
