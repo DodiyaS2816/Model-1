@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float, Position & Media Query</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        h2 {
+            color: #0066cc;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+
+        /* ===== FLOAT ===== */
+        .box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: #fafafa;
+        }
+
+        .float-left {
+            float: left;
+            width: 30%;
+            background: #0066cc;
+            color: white;
+            padding: 15px;
+            margin-right: 15px;
+        }
+
+        .float-right {
+            float: right;
+            width: 30%;
+            background: #009900;
+            color: white;
+            padding: 15px;
+            margin-left: 15px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /* ===== POSITION ===== */
+        .position-demo {
+            height: 150px;
+            background: #f0f0f0;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .pos-box {
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .pos-static {
+            position: static;
+            background: #0066cc;
+        }
+
+        .pos-relative {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background: #009900;
+        }
+
+        .pos-absolute {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            background: #ff6600;
+        }
+
+        .pos-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #cc0000;
+            width: 100px;
+            padding: 10px;
+            z-index: 100;
+        }
+
+        /* ===== MEDIA QUERIES ===== */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .item {
+            background: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .float-left,
+            .float-right {
+                float: none;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .pos-fixed {
+                display: none;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        code {
+            background: #efefef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Float, Position & Media Query</h1>
+
+        <!-- FLOAT SECTION -->
+        <h2>1. FLOAT</h2>
+        <p>Float removes an element from normal flow and allows other content to wrap around it.</p>
+
+        <h3>Float Left Example:</h3>
+        <div class="box">
+            <div class="float-left">Floated Left</div>
+            <p>This text wraps around the floated box on the left.</p>
+            <div class="clear"></div> 
+        </div>
+
+        <h3>Float Right Example:</h3>
+        <div class="box">
+            <div class="float-right">Floated Right</div>
+            <p>This text wraps around the floated box on the right.</p>
+            <div class="clear"></div>
+        </div>
+        <!-- POSITION SECTION -->
+        <h2>2. POSITION</h2>
+        <p>Position determines how an element is placed in the document flow.</p>
+
+        <h3>Position Static (Default):</h3>
+        <div class="position-demo">
+            <div class="pos-box pos-static">Static</div>
+        </div>
+
+        <div class="position-demo">
+            <div class="pos-box pos-relative">Relative<br></div>
+        </div>
+
+        <h3>Position Absolute (Relative to positioned parent):</h3>
+        <div class="position-demo">
+            <div class="pos-box pos-absolute">Absolute<br></div>
+        </div>
+        <!-- MEDIA QUERY SECTION -->
+        <h2>3. MEDIA QUERIES</h2>
+
+        <h3>Responsive Grid (Resize browser to see changes):</h3>
+        <div class="grid">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+        </div>
+
+    </div>
+</body>
+</html>
