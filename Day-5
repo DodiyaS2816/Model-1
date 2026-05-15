@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Day 5</title>
+    <style>
+        .body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #646161;
+        }
+        .Image-box{
+            width: 700px;
+            height: 650px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .Image-box:hover img{
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        .video-box{
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            display: flex;
+            border-radius: 10px;
+            justify-content: center;
+        }
+        h2{
+            margin: 20px;
+            color:antiquewhite
+        }
+      </style>
+</head>     
+<body class="body">
+    <h2>Image Hover</h2>
+    <div class="Image-box">
+        <img src="https://wallpapercave.com/wp/wp5809702.jpg" alt="Image">
+    </div>
+        <h2>Video position </h2>
+        <div class="video-box">
+            <video controls>
+                <source src="142388-779987454_medium.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+</body>
+</html>
