@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+    <style>
+        .body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+           background-color: #9c9797;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-top: 317px;;
+            background: wheat;
+            border-radius: 100px;
+            justify-content: center;;
+        }
+        p {
+            font-size: 18px;
+            text-align: center;
+            justify-content: center;
+            height: 10px;
+        }
+    </style>
+</head>
+<body class="body">
+    <h2>JavaScript Variables</h2>
+    <p>In this examples x,y, and z are variables.</p>
+    <p id="Demo"></p>
+
+    <script>
+        var x = 5;
+        var y = 6;
+        var z = x + y;
+        document.getElementById("Demo").innerHTML = "The value of z is: " + z;
+        function showAlert() {
+            alert("The value of z is: " + z);
+        }
+        showAlert();
+        function showConfirm() {
+            return confirm("The value of z is: " + z);
+        }
+        showConfirm();
+        function showPrompt() {
+            return prompt("The value of z is: " + z);
+        }
+        showPrompt();
+    </script>
+</body>
+</html>
