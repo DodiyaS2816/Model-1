@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Layout</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200">
+
+  <!-- Header -->
+  <header class="bg-black text-white p-5 text-3xl font-bold text-center font-italic">
+    My Flexbox Layout Using Tailwind CSS
+  </header>
+
+  <!-- Main Container -->
+  <div class="flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-700 text-white p-6">
+      <ul class="space-y-4 text-lg">
+        <li class="hover:text-yellow-300 cursor-pointer">About</li>
+        <li class="hover:text-yellow-300 cursor-pointer">Services</li>
+        <li class="hover:text-yellow-300 cursor-pointer">Contact</li>
+      </ul>
+    </aside>
+
+    <!-- Content Area -->
+    <main class="flex-1 bg-white p-10">
+
+      <h1 class="bg-yellow-500 text-white inline-block px-4 py-2 text-2xl font-bold mb-6">
+        Welcome
+      </h1>
+
+      <p class="bg-blue-200 p-3 text-lg font-bold">
+        This is a simple Flexbox Layout using Tailwind CSS.
+      </p>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
