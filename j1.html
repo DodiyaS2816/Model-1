@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2 Math Models in JavaScript</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right,#1e3c72,#2a5298);
+        margin:0;
+        padding:30px;
+        color:white;
+    }
+
+    h1{
+        text-align:center;
+        margin-bottom:40px;
+    }
+
+    .container{
+        display:flex;
+        gap:30px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .card{
+        background:white;
+        color:black;
+        padding:25px;
+        border-radius:15px;
+        width:320px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .card h2{
+        text-align:center;
+        margin-bottom:20px;
+        color:#1e3c72;
+    }
+
+    input{
+        width:100%;
+        padding:10px;
+        margin:10px 0;
+        border-radius:8px;
+        border:1px solid gray;
+        font-size:16px;
+    }
+
+    button{
+        width:100%;
+        padding:12px;
+        background:#1e3c72;
+        color:white;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        font-size:16px;
+    }
+
+    button:hover{
+        background:#16325c;
+    }
+
+    .result{
+        margin-top:15px;
+        font-size:18px;
+        font-weight:bold;
+        text-align:center;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>JavaScript Math Models</h1>
+
+<div class="container">
+
+    <!-- BMI Calculator -->
+    <div class="card">
+        <h2>BMI Calculator</h2>
+
+        <input type="number" id="weight" placeholder="Enter Weight (kg)">
+        <input type="number" id="height" placeholder="Enter Height (m)">
+
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <div class="result" id="bmiResult"></div>
+    </div>
+
+    <!-- Simple Interest Calculator -->
+    <div class="card">
+        <h2>Simple Interest</h2>
+
+        <input type="number" id="principal" placeholder="Principal Amount">
+        <input type="number" id="rate" placeholder="Rate of Interest">
+        <input type="number" id="time" placeholder="Time (Years)">
+
+        <button onclick="calculateSI()">Calculate Interest</button>
+
+        <div class="result" id="siResult"></div>
+    </div>
+
+</div>
+
+<script>
+
+    // BMI Calculator
+    function calculateBMI(){
+
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+
+        if(weight === "" || height === ""){
+            document.getElementById("bmiResult").innerHTML = "Please enter all values";
+            return;
+        }
+
+        let bmi = weight / (height * height);
+
+        document.getElementById("bmiResult").innerHTML =
+        "Your BMI is: " + bmi.toFixed(2);
+    }
+
+
+    // Simple Interest Calculator
+    function calculateSI(){
+
+        let p = document.getElementById("principal").value;
+        let r = document.getElementById("rate").value;
+        let t = document.getElementById("time").value;
+
+        if(p === "" || r === "" || t === ""){
+            document.getElementById("siResult").innerHTML = "Please enter all values";
+            return;
+        }
+
+        let si = (p * r * t) / 100;
+
+        document.getElementById("siResult").innerHTML =
+        "Simple Interest = ₹" + si;
+    }
+
+</script>
+
+</body>
+</html>
