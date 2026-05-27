@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing App</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #f4f4f4;
+        }
+
+        .container{
+            background: white;
+            padding: 20px;
+            width: 400px;
+            border: 1px solid #ccc;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        p{
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Input Box -->
+        <input type="text" id="textbox" placeholder="Type something...">
+
+        <!-- Output -->
+        <p>You typed: <span id="output"></span></p>
+
+        <!-- Reset Button -->
+        <button id="resetBtn">Reset</button>
+
+    </div>
+
+    <script>
+
+        // Show typing text
+        $("#textbox").keyup(function(){
+
+            let text = $("#textbox").val();
+
+            $("#output").text(text);
+
+        });
+
+        // Reset button
+        $("#resetBtn").click(function(){
+
+            $("#textbox").val("");
+
+            $("#output").text("");
+
+        });
+
+    </script>
+
+</body>
+</html>
