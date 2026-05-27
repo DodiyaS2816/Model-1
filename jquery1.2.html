@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Table Effects</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background: #c1c0c0;
+        margin: 40px;
+    }
+
+    h1{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    table{
+        width: 80%;
+        margin: auto;
+        border-collapse: collapse;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    th{
+        background: #555;
+        color: white;
+        padding: 12px;
+    }
+
+    td{
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    button{
+        padding: 8px 14px;
+        border: none;
+        background: crimson;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background: darkred;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Zebra Stripes Table Effect using jQuery</h1>
+
+<table id="studentTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Shrey</td>
+            <td>Full Stack</td>
+            <td><button class="deleteBtn">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Riya</td>
+            <td>Cloud Computing</td>
+            <td><button class="deleteBtn">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Nehanshu</td>
+            <td>AI & ML</td>
+            <td><button class="deleteBtn">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Tanvi</td>
+            <td>Cyber Security</td>
+            <td><button class="deleteBtn">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Neha</td>
+            <td>Full Stack</td>
+            <td><button class="deleteBtn">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+
+    // Zebra Stripes Effect
+    $("#studentTable tbody tr:odd").css("background","#00FFFF");
+
+    // Delete Row Effect
+    $(".deleteBtn").click(function(){
+        $(this).closest("tr").fadeOut(500,function(){
+            $(this).remove();
+
+            // Reapply Zebra Stripes
+            $("#studentTable tbody tr").css("background","white");
+            $("#studentTable tbody tr:odd").css("background","#00FFFF");
+        });
+    });
+
+</script>
+
+</body>
+</html>
