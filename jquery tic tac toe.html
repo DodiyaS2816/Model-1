@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    body{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      font-family:Arial;
+      gap:40px;
+      background:#f4f4f4;
+    }
+
+    .board{
+      display:grid;
+      grid-template-columns:repeat(3,80px);
+      gap:5px;
+    }
+
+    .cell{
+      width:80px;
+      height:80px;
+      border:2px solid black;
+      font-size:40px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      cursor:pointer;
+      background:white;
+    }
+
+    #history div{
+      border:1px solid black;
+      padding:5px;
+      margin:5px;
+      background:white;
+    }
+
+    #winner{
+      margin-top:10px;
+      font-size:20px;
+      font-weight:bold;
+      color:green;
+    }
+
+    button{
+      margin-top:15px;
+      padding:10px 20px;
+      font-size:16px;
+      cursor:pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- BOARD -->
+<div class="board">
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+</div>
+
+<!-- HISTORY -->
+<div>
+  <h3>Moves</h3>
+
+  <div id="history"></div>
+
+  <div id="winner"></div>
+
+  <button onclick="restartGame()">Restart Game</button>
+</div>
+
+<script>
+
+let player = "O";
+let move = 1;
+let gameOver = false;
+
+$(".cell").click(function(){
+
+  if($(this).text() != "" || gameOver) return;
+
+  $(this).text(player);
+
+  $("#history").append(
+    "<div>"+move+". Player "+player+"</div>"
+  );
+
+  checkWinner();
+
+  move++;
+
+  player = (player=="O") ? "X" : "O";
+
+});
+
+function checkWinner(){
+
+  let cells = $(".cell");
+
+  let a = $(cells[0]).text();
+  let b = $(cells[1]).text();
+  let c = $(cells[2]).text();
+  let d = $(cells[3]).text();
+  let e = $(cells[4]).text();
+  let f = $(cells[5]).text();
+  let g = $(cells[6]).text();
+  let h = $(cells[7]).text();
+  let i = $(cells[8]).text();
+
+  // Winning conditions
+  if(
+    (a==b && b==c && a!="") ||
+    (d==e && e==f && d!="") ||
+    (g==h && h==i && g!="") ||
+    (a==d && d==g && a!="") ||
+    (b==e && e==h && b!="") ||
+    (c==f && f==i && c!="") ||
+    (a==e && e==i && a!="") ||
+    (c==e && e==g && c!="")
+  ){
+    $("#winner").text("Player " + player + " Wins!");
+    gameOver = true;
+  }
+
+  // Draw condition
+  else if(move == 9){
+    $("#winner").text("Match Draw!");
+  }
+}
+
+function restartGame(){
+
+  $(".cell").text("");
+
+  $("#history").html("");
+
+  $("#winner").text("");
+
+  player = "O";
+
+  move = 1;
+
+  gameOver = false;
+}
+
+</script>
+
+</body>
+</html>
