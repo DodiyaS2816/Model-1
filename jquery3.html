@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Move Div using jQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    body{
+      font-family: Arial;
+      padding: 30px;
+      text-align: center;
+      background: #c1c0c0;
+    }
+
+    h2{
+      margin-bottom: 20px;
+    }
+
+    .box{
+      width: 300px;
+      height: 250px;
+      border: 2px solid black;
+      margin-bottom: 20px;
+      padding: 15px;
+      margin-left: 650px;
+      margin-right: 650px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 20px;
+      align-items:center;
+    }
+
+    #div1{
+      background: lightblue;
+    }
+
+    #div2{
+      background: lightgreen;
+    }
+
+    .movingDiv{
+      width: 120px;
+      padding: 15px;
+      background: peachpuff;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button{
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Move One DIV Inside Another using jQuery</h2>
+
+  <div class="box" id="div1">
+    <h3>DIV 1</h3>
+
+    <div class="movingDiv" id="moveDiv">
+      Moving DIV
+    </div>
+  </div>
+
+  <div class="box" id="div2">
+    <h3>DIV 2</h3>
+  </div>
+
+  <button id="moveBtn">Move DIV</button>
+  <button id="1Btn">Move DIV</button>
+  <script>
+    $("#moveBtn").click(function(){
+
+    $("#moveDiv").appendTo("#div2");
+
+    });
+
+    $("#1Btn").click(function(){
+
+    $("#moveDiv").appendTo("#div1");
+
+    });
+  </script>
+
+</body>
+</html>
