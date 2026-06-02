@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>React Radio Button</title>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f4f4f4;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.message{
+    font-size:22px;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+label{
+    font-size:18px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+function App() {
+
+    const [liked, setLiked] = React.useState(false);
+
+    const handleChange = () => {
+        setLiked(!liked);
+    };
+
+    return (
+        <div className="card">
+
+            <label>
+                <input
+                    type="radio"
+                    checked={liked}
+                    onClick={handleChange}
+                    readOnly
+                />
+                {" "}I Like This
+            </label>
+
+            <div className="message">
+                {liked
+                    ? "You like this"
+                    : "You did not like this"}
+            </div>
+
+        </div>
+    );
+}
+
+const root = ReactDOM.createRoot(
+    document.getElementById("root")
+);
+
+root.render(<App />);
+
+</script>
+
+</body>
+</html>
